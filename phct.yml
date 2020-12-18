@@ -1,0 +1,21 @@
+#select Name, Location, specialties.Specialty as Specialty 
+#from docs
+#join specialties on docs.specialty_id = specialties.id
+#where name = Bob
+localhost:
+   login: testuser
+   password: PoorPassword
+   Sheet1:
+      Name:
+         docs: Name
+      Location:
+         docs: Location
+      Specialty:
+         foreign_key: specialty_id
+         foreign_primary_key: id
+         specialties: Specialty
+   Sheet2:
+      Specialty:
+         specialties: Specialty
+      Description:
+         specialties: Description
